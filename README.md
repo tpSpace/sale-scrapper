@@ -10,6 +10,7 @@ Currently, two official plugins are available:
 In this project we are going to use `yarn` as a package manager and `vite` as a bundler.
 
 To run the project.
+
 ```bash
 yarn run dev
 ```
