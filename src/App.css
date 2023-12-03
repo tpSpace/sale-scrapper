@@ -44,4 +44,7 @@
   height: 80%;
   background-color: #f1f1f1;
   border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
