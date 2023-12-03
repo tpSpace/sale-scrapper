@@ -1,24 +1,22 @@
 import './App.css'
-import SideBar from './components/sidebar'
+import { Route, Routes} from 'react-router-dom';
+import Home from './pages/home/home';
+import About from './pages/about/about';
+import Favorite from './pages/favorite/favorite';
+import Login from './pages/login/login';
+import Register from './pages/register/register';
+
 function App() {
 
   return (
     <>
-      <div className="container">
-        <div className="navbar">
-          <SideBar />
-        </div>
-
-        <div className="content">
-          <div className="searchbar">
-            <h1>search here?</h1>
-          </div>
-          <div className="item">
-            <h1>Hii</h1>
-          </div>
-        </div>
-        
-      </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/favorite" element={<Favorite />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+      </Routes>
     </>
   )
 }
