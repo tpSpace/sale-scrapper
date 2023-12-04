@@ -1,6 +1,6 @@
 import SideBar from "../sidebar/sidebar"
 import PropTypes from 'prop-types'
-
+import './index.css'
 function Structure({children}) {
   return (
     <div className="container">
