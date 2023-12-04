@@ -14,14 +14,17 @@ function Login() {
         setUser({...user, [e.target.id]: e.target.value});
     }
 
-    const handleSubmit =async (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
+        
         await axios.post("http://api.captechvn.com/login",user).then((res)=>{
-            console.log(res.status )
+            console.log(res )
+            
             if (res.status === 200) {
+                console.log(e);
                 localStorage.setItem("token", res.data.token);
                 alert("You login successfully");
-                window.location.href = "/";
+                // window.location.href = "/";
             }
         }).catch((err)=>{
             console.error(err)
