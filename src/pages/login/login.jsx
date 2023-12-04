@@ -6,7 +6,7 @@ import { useState } from 'react';
 function Login() {
 
     const [user,setUser] = useState({
-        email: "",
+        username: "",
         password: "",
     });
 
@@ -16,16 +16,15 @@ function Login() {
 
     const handleSubmit =async (e) => {
         e.preventDefault();
-        await axios.post("http://api.captechvn.com/login").then((res)=>{
-            console.log(res.data)
-            if (res.data.status === "success") {
+        await axios.post("http://api.captechvn.com/login",user).then((res)=>{
+            console.log(res.status )
+            if (res.status === 200) {
                 localStorage.setItem("token", res.data.token);
-                localStorage.setItem("user", JSON.stringify(res.data.user));
+                alert("You login successfully");
                 window.location.href = "/";
-                window.location.reload();
             }
         }).catch((err)=>{
-            console.log(err)
+            console.error(err)
         })
     }
 
@@ -40,7 +39,7 @@ function Login() {
                             <h1>Login</h1>
                             <br />
                             <input 
-                                type="email" 
+                                type="text" 
                                 placeholder="Username" 
                                 onChange={(e) => onInputChange(e)}
                                 required
