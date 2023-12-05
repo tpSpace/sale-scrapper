@@ -24,7 +24,7 @@ function Login() {
                 console.log(e);
                 localStorage.setItem("token", res.data.token);
                 alert("You login successfully");
-                // window.location.href = "/";
+                window.location.href = "/";
             }
         }).catch((err)=>{
             console.error(err)

@@ -1,0 +1,15 @@
+.about {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.02);
+    border: 1px solid #eee;
+    overflow: hidden;
+    width: 50%;
+    margin: 0 auto;
+}   
+
+.about:hover {
+    box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.1);
+}

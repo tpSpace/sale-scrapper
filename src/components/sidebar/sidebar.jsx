@@ -14,10 +14,13 @@ const SideBar = () => {
         <div className="sidebar">
             <Link to="/">Home</Link>
             <Link to="/about">About</Link>
-            <Link to="/favorite">Favorite</Link>
+            
             <Link to="/login">Login</Link>
             {isUserLoggedIn ? (
-                <Link to="/" onClick={removeToken}>Logout</Link>
+                <>
+                    <Link to="/favorite">Favorite</Link>
+                    <Link to="/" onClick={removeToken}>Logout</Link>
+                </>
             ) : (
                 <Link to="/register">Register</Link>
             )}
