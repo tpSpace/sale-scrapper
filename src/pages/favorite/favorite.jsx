@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import Structure from "../../components/structure/structure"
 import "./favorite.css"
 
@@ -7,7 +7,7 @@ const Favorite = () => {
     const [products, setProducts] = useState([])
 
     useEffect(() => {
-        fetch("https://api.captechvn.com/shopee")
+        fetch("https://captechvn.com/shopee")
             .then((response) => response.json())
             .then((data) => setProducts(data))
             .catch((error) => console.error("Error fetching data:", error))

@@ -2,7 +2,9 @@ import SideBar from "../sidebar/sidebar"
 import SearchBar from "../searchbar/search"
 import PropTypes from "prop-types"
 import "./index.css"
-function Structure({ children }) {
+
+function Structure({children}) {
+
   return (
     <div className="container">
       <div className="navbar">
