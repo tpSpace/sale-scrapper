@@ -1,6 +1,8 @@
 import SideBar from "../sidebar/sidebar"
 import PropTypes from 'prop-types'
 import './index.css'
+import SearchBar from "../searchbar/searchbar"
+
 function Structure({children}) {
   return (
     <div className="container">
@@ -10,7 +12,7 @@ function Structure({children}) {
 
             <div className="content">
                 <div className="searchbar">
-                    <h1>search here?</h1>
+                    <SearchBar />
                 </div>
 
                 <div className="item">
